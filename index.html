@@ -482,7 +482,7 @@
 
                     <div class="audio-row">
                         <div class="audio-label">
-                            معاينة (15 ثانية) · Preview:
+                            معاينة (0 → 15 ثانية) · Preview:
                         </div>
                         <audio class="preview-15" controls>
                             <source src="tracks/time-liljon-get-low.mp3" type="audio/mpeg" />
@@ -507,7 +507,6 @@
                 </div>
             </article>
 
-            <!-- تقدر تنسخ هذا الكرت وتعدّل الاسم والصوت لأي ريمكس آخر مستقبلاً -->
         </div>
     </section>
 
@@ -524,6 +523,7 @@
         </div>
 
         <div class="cards">
+            <!-- كرت توضيحي قديم (تقدر تعدله لاحقاً) -->
             <article class="card">
                 <div class="card-inner">
                     <div class="card-label">Funk · Groovy</div>
@@ -540,6 +540,55 @@
                     </div>
                 </div>
             </article>
+
+            <!-- فنكيات – 130 طلعت شقلباظ -->
+            <article class="card">
+                <div class="card-inner">
+                    <div class="card-label">Funk · Groovy</div>
+
+                    <h3>
+                        فنكيات – 130 طلعت شقلباظ
+                        <span class="en">FT-FUNK-001 · 130 Talaat Shaqlabaz – FAHAD TIME</span>
+                    </h3>
+
+                    <p>
+                        فنكية إيقاعية حماسية على سرعة 130 BPM بأسلوب
+                        <span class="highlight">FAHAD TIME</span>، مناسبة للريلز، المقاطع السريعة،
+                        والمحتوى الحركي.
+                    </p>
+
+                    <div class="track-meta">
+                        الجودة الكاملة: WAV + MP3 · تراك فنكي حصري يمكن استخدامه في مشاريعك المرئية.
+                    </div>
+
+                    <div class="price-tag">السعر / Price: 15 USD</div>
+
+                    <div class="audio-row">
+                        <div class="audio-label">معاينة (من 13 ثانية إلى 30 ثانية):</div>
+
+                        <audio class="funk-preview" controls>
+                            <source src="tracks/130-طلعت-شقلباظ.mp3" type="audio/mpeg" />
+                            متصفحك لا يدعم تشغيل الصوت.
+                        </audio>
+
+                        <!-- زر شراء النسخة الكاملة عبر PayPal -->
+                        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+                            <input type="hidden" name="cmd" value="_xclick" />
+                            <input type="hidden" name="business" value="fahadtime91@gmail.com" />
+                            <input type="hidden" name="item_name" value="FT-FUNK-001 – 130 Talaat Shaqlabaz – FULL VERSION" />
+                            <input type="hidden" name="amount" value="15.00" />
+                            <input type="hidden" name="currency_code" value="USD" />
+                            <input type="hidden" name="return" value="https://fahadtime.github.io/fahadtime/thanks.html" />
+
+                            <button type="submit" class="btn-primary btn-small">
+                                شراء النسخة الكاملة
+                                <span class="en">Buy Full Track</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </article>
+
         </div>
     </section>
 
@@ -661,21 +710,38 @@
         This site is under active development. More tracks and features coming soon.
     </footer>
 
-    <!-- سكربت لتحديد المعاينة بـ 15 ثانية -->
+    <!-- سكربت المعاينات -->
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            var maxPreview = 15; // عدد الثواني للمعاينة
-            var previews = document.querySelectorAll("audio.preview-15");
+    document.addEventListener("DOMContentLoaded", function () {
+        // معاينة الريمكسات: 0 → 15 ثانية
+        var maxPreview = 15;
+        var previews = document.querySelectorAll("audio.preview-15");
 
-            previews.forEach(function (audio) {
-                audio.addEventListener("timeupdate", function () {
-                    if (audio.currentTime > maxPreview) {
-                        audio.pause();
-                        audio.currentTime = 0;
-                    }
-                });
+        previews.forEach(function (audio) {
+            audio.addEventListener("timeupdate", function () {
+                if (audio.currentTime > maxPreview) {
+                    audio.pause();
+                    audio.currentTime = 0;
+                }
             });
         });
+
+        // معاينة الفنكيات: 13 → 30 ثانية
+        var funkPlayers = document.querySelectorAll("audio.funk-preview");
+
+        funkPlayers.forEach(function (audio) {
+            audio.addEventListener("loadedmetadata", function () {
+                audio.currentTime = 13;
+            });
+
+            audio.addEventListener("timeupdate", function () {
+                if (audio.currentTime >= 30) {
+                    audio.pause();
+                    audio.currentTime = 13;
+                }
+            });
+        });
+    });
     </script>
 </body>
 </html>
