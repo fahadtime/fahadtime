@@ -1,12 +1,211 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <title>موقعي لبيع الأغاني - FAHAD TIME</title>
+    <title>FAHAD TIME - متجر الأغاني</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background: linear-gradient(135deg, #0f172a, #1e293b);
+            color: #e5e7eb;
+        }
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .logo {
+            font-size: 1rem;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: #38bdf8;
+            margin-bottom: 1rem;
+        }
+
+        .title {
+            font-size: 2.5rem;
+            margin: 0.5rem 0;
+            color: #facc15;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            max-width: 600px;
+            color: #cbd5f5;
+            margin-bottom: 2rem;
+        }
+
+        .btns {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 3rem;
+        }
+
+        .btn-primary,
+        .btn-secondary {
+            padding: 0.9rem 1.8rem;
+            border-radius: 999px;
+            border: none;
+            cursor: pointer;
+            font-size: 0.95rem;
+            font-weight: 600;
+            transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+            text-decoration: none;
+        }
+
+        .btn-primary {
+            background: #facc15;
+            color: #1f2933;
+            box-shadow: 0 10px 25px rgba(250, 204, 21, 0.35);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 30px rgba(250, 204, 21, 0.5);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: #e5e7eb;
+            border: 1px solid #64748b;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(148, 163, 184, 0.15);
+            transform: translateY(-2px);
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 1.5rem;
+            max-width: 900px;
+            width: 100%;
+            margin: 0 auto 3rem auto;
+            padding: 0 1.5rem;
+        }
+
+        .card {
+            background: rgba(15, 23, 42, 0.9);
+            border-radius: 1.25rem;
+            padding: 1.5rem;
+            border: 1px solid rgba(148, 163, 184, 0.4);
+            box-shadow: 0 20px 40px rgba(15, 23, 42, 0.7);
+            text-align: right;
+        }
+
+        .card h3 {
+            margin-top: 0;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+            color: #e5e7eb;
+        }
+
+        .card p {
+            margin: 0;
+            font-size: 0.9rem;
+            color: #9ca3af;
+            line-height: 1.7;
+        }
+
+        .footer {
+            padding: 1.5rem;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #6b7280;
+            border-top: 1px solid rgba(148, 163, 184, 0.2);
+            background: rgba(15, 23, 42, 0.85);
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 0.35rem 0.8rem;
+            font-size: 0.75rem;
+            border-radius: 999px;
+            background: rgba(56, 189, 248, 0.12);
+            color: #38bdf8;
+            border: 1px solid rgba(56, 189, 248, 0.6);
+            margin-bottom: 0.75rem;
+        }
+
+        .highlight {
+            color: #f97316;
+            font-weight: 600;
+        }
+
+        @media (max-width: 480px) {
+            .title {
+                font-size: 2rem;
+            }
+            .subtitle {
+                font-size: 1rem;
+            }
+            .hero {
+                padding-top: 3rem;
+                padding-bottom: 3rem;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>مرحباً بكم في موقع FAHAD TIME 🎵</h1>
-    <p>هذا أول موقع لي على GitHub Pages.</p>
-    <p>قريباً إن شاء الله راح أضيف أغاني وأعمالي الموسيقية للبيع هنا.</p>
+
+    <section class="hero">
+        <div class="logo">FAHAD TIME</div>
+        <div class="badge">ريمكسات · تراكات حصرية · أعمال خاصة</div>
+        <h1 class="title">متجر الأغاني الرسمي لـ FAHAD TIME</h1>
+        <p class="subtitle">
+            هنا تلاقي الريمكسات والأغاني الحصرية اللي ما تنزل في أي مكان ثاني.
+            إذا كنت صانع محتوى، دي جي، أو تحب تجمع تراكات مميزة –
+            هذا المكان معمول لك 👌
+        </p>
+
+        <div class="btns">
+            <a href="#tracks" class="btn-primary">استعرض التراكات المتاحة</a>
+            <a href="#contact" class="btn-secondary">تواصل لطلب عمل خاص</a>
+        </div>
+
+        <div class="cards" id="tracks">
+            <div class="card">
+                <h3>باقة ريمكسات جاهزة للاستخدام</h3>
+                <p>
+                    مجموعة ريمكسات مختارة بجودة عالية، مناسبة لليوتيوب،
+                    السناب، والتيك توك أو الحفلات الصغيرة.  
+                    <span class="highlight">يمكنك لاحقاً وضع زر شراء لكل ريمكس هنا.</span>
+                </p>
+            </div>
+            <div class="card">
+                <h3>توزيع موسيقي مخصص باسمك</h3>
+                <p>
+                    تواصل معي لعمل توزيع خاص يحمل أسلوب FAHAD TIME
+                    لكن بطابعك أنت: اسمك، هويتك، والجملة الصوتية الخاصة فيك.
+                </p>
+            </div>
+            <div class="card" id="contact">
+                <h3>طريقة التواصل والشراء</h3>
+                <p>
+                    حالياً الطلبات تتم يدوياً عن طريق:
+                    <br><br>
+                    - واتساب: <span class="highlight">اكتب رقمك هنا</span><br>
+                    - إنستقرام: <span class="highlight">@حط_اليوزر_هنا</span><br><br>
+                    لاحقاً نقدر نضيف زر دفع أونلاين وروابط تحميل تلقائية بعد الدفع.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        © <span class="highlight">FAHAD TIME</span> – جميع الحقوق محفوظة.  
+        هذا الموقع قيد التطوير، وسيتم إضافة المزيد من التراكات والخيارات قريباً بإذن الله.
+    </footer>
+
 </body>
 </html>
