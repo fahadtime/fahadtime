@@ -2,44 +2,60 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <title>FAHAD TIME - متجر الأغاني</title>
+    <title>FAHAD TIME - متجر الأغاني والريمكسات</title>
     <style>
         body {
             margin: 0;
             font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-            background: linear-gradient(135deg, #0f172a, #1e293b);
+            background: radial-gradient(circle at top, #1f2937, #020617);
             color: #e5e7eb;
         }
 
+        a {
+            text-decoration: none;
+        }
+
         .hero {
-            min-height: 100vh;
+            min-height: 70vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
-            padding: 2rem;
+            padding: 2.5rem 1.5rem 3rem;
         }
 
         .logo {
-            font-size: 1rem;
+            font-size: 0.9rem;
             letter-spacing: 0.3em;
             text-transform: uppercase;
             color: #38bdf8;
-            margin-bottom: 1rem;
+            margin-bottom: 0.75rem;
         }
 
         .title {
-            font-size: 2.5rem;
-            margin: 0.5rem 0;
+            font-size: 2.4rem;
+            margin: 0.2rem 0 0.5rem;
             color: #facc15;
         }
 
         .subtitle {
-            font-size: 1.1rem;
-            max-width: 600px;
+            font-size: 1.05rem;
+            max-width: 650px;
             color: #cbd5f5;
-            margin-bottom: 2rem;
+            margin-bottom: 1.8rem;
+            line-height: 1.8;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 0.35rem 0.9rem;
+            font-size: 0.75rem;
+            border-radius: 999px;
+            background: rgba(56, 189, 248, 0.12);
+            color: #38bdf8;
+            border: 1px solid rgba(56, 189, 248, 0.6);
+            margin-bottom: 0.75rem;
         }
 
         .btns {
@@ -47,7 +63,7 @@
             gap: 1rem;
             flex-wrap: wrap;
             justify-content: center;
-            margin-bottom: 3rem;
+            margin-bottom: 2.3rem;
         }
 
         .btn-primary,
@@ -58,19 +74,20 @@
             cursor: pointer;
             font-size: 0.95rem;
             font-weight: 600;
-            transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+            transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease, border 0.15s ease;
             text-decoration: none;
+            display: inline-block;
         }
 
         .btn-primary {
             background: #facc15;
-            color: #1f2933;
+            color: #1f2937;
             box-shadow: 0 10px 25px rgba(250, 204, 21, 0.35);
         }
 
         .btn-primary:hover {
             transform: translateY(-2px);
-            box-shadow: 0 15px 30px rgba(250, 204, 21, 0.5);
+            box-shadow: 0 15px 30px rgba(250, 204, 21, 0.55);
         }
 
         .btn-secondary {
@@ -84,28 +101,49 @@
             transform: translateY(-2px);
         }
 
+        .btn-small {
+            padding: 0.6rem 1.3rem;
+            font-size: 0.85rem;
+        }
+
+        .section {
+            max-width: 1050px;
+            margin: 0 auto 3rem auto;
+            padding: 0 1.5rem 3rem;
+        }
+
+        .section-title {
+            font-size: 1.6rem;
+            margin-bottom: 1.2rem;
+            color: #e5e7eb;
+            text-align: center;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 0.95rem;
+            color: #9ca3af;
+            margin-bottom: 2rem;
+        }
+
         .cards {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-            gap: 1.5rem;
-            max-width: 900px;
-            width: 100%;
-            margin: 0 auto 3rem auto;
-            padding: 0 1.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.6rem;
         }
 
         .card {
-            background: rgba(15, 23, 42, 0.9);
-            border-radius: 1.25rem;
-            padding: 1.5rem;
+            background: rgba(15, 23, 42, 0.92);
+            border-radius: 1.3rem;
+            padding: 1.6rem 1.5rem;
             border: 1px solid rgba(148, 163, 184, 0.4);
-            box-shadow: 0 20px 40px rgba(15, 23, 42, 0.7);
+            box-shadow: 0 18px 40px rgba(15, 23, 42, 0.7);
             text-align: right;
         }
 
         .card h3 {
             margin-top: 0;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.6rem;
             font-size: 1.1rem;
             color: #e5e7eb;
         }
@@ -114,27 +152,7 @@
             margin: 0;
             font-size: 0.9rem;
             color: #9ca3af;
-            line-height: 1.7;
-        }
-
-        .footer {
-            padding: 1.5rem;
-            text-align: center;
-            font-size: 0.8rem;
-            color: #6b7280;
-            border-top: 1px solid rgba(148, 163, 184, 0.2);
-            background: rgba(15, 23, 42, 0.85);
-        }
-
-        .badge {
-            display: inline-block;
-            padding: 0.35rem 0.8rem;
-            font-size: 0.75rem;
-            border-radius: 999px;
-            background: rgba(56, 189, 248, 0.12);
-            color: #38bdf8;
-            border: 1px solid rgba(56, 189, 248, 0.6);
-            margin-bottom: 0.75rem;
+            line-height: 1.8;
         }
 
         .highlight {
@@ -142,15 +160,58 @@
             font-weight: 600;
         }
 
+        .track-meta {
+            font-size: 0.8rem;
+            color: #6b7280;
+            margin-top: 0.4rem;
+        }
+
+        .price-tag {
+            font-size: 0.95rem;
+            margin-top: 0.6rem;
+            color: #facc15;
+            font-weight: 600;
+        }
+
+        .audio-row {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 0.9rem;
+            margin-top: 1rem;
+        }
+
+        .audio-row audio {
+            max-width: 260px;
+        }
+
+        .audio-label {
+            font-size: 0.85rem;
+            color: #cbd5f5;
+        }
+
+        .footer {
+            padding: 1.6rem 1.5rem 2rem;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #6b7280;
+            border-top: 1px solid rgba(148, 163, 184, 0.2);
+            background: rgba(2, 6, 23, 0.96);
+        }
+
+        .footer span {
+            color: #facc15;
+        }
+
         @media (max-width: 480px) {
             .title {
                 font-size: 2rem;
             }
             .subtitle {
-                font-size: 1rem;
+                font-size: 0.98rem;
             }
             .hero {
-                padding-top: 3rem;
+                padding-top: 3.2rem;
                 padding-bottom: 3rem;
             }
         }
@@ -158,54 +219,191 @@
 </head>
 <body>
 
+    <!-- الهيرو -->
     <section class="hero">
         <div class="logo">FAHAD TIME</div>
-        <div class="badge">ريمكسات · تراكات حصرية · أعمال خاصة</div>
-        <h1 class="title">متجر الأغاني الرسمي لـ FAHAD TIME</h1>
+        <div class="badge">ريمكسات · توزيعات · أعمال خاصة</div>
+        <h1 class="title">متجر الأغاني والريمكسات لـ FAHAD TIME</h1>
         <p class="subtitle">
-            هنا تلاقي الريمكسات والأغاني الحصرية اللي ما تنزل في أي مكان ثاني.
-            إذا كنت صانع محتوى، دي جي، أو تحب تجمع تراكات مميزة –
-            هذا المكان معمول لك 👌
+            استمع أولاً لمعاينة قصيرة (15 ثانية)، وإذا حبيت التراك
+            تقدر تشتري النسخة الكاملة مباشرة عبر <span class="highlight">PayPal</span>،
+            ويتم إرسال رابط التحميل لك بعد الدفع.
         </p>
 
         <div class="btns">
-            <a href="#tracks" class="btn-primary">استعرض التراكات المتاحة</a>
-            <a href="#contact" class="btn-secondary">تواصل لطلب عمل خاص</a>
+            <a href="#tracks" class="btn-primary">استعرض التراكات</a>
+            <a href="#payment-info" class="btn-secondary">شرح طريقة الدفع</a>
         </div>
+    </section>
 
-        <div class="cards" id="tracks">
+    <!-- قسم التراكات مع المعاينة والشراء -->
+    <section class="section" id="tracks">
+        <h2 class="section-title">تراكات متاحة للشراء الفردي</h2>
+        <p class="section-subtitle">
+            كل تراك يحتوي على معاينة قصيرة (15 ثانية) للاستماع قبل الشراء،
+            وزر دفع خاص به لشراء النسخة الكاملة.
+        </p>
+
+        <div class="cards">
+
+            <!-- تراك 1 -->
             <div class="card">
-                <h3>باقة ريمكسات جاهزة للاستخدام</h3>
+                <h3>Remix – Midnight Vibes</h3>
                 <p>
-                    مجموعة ريمكسات مختارة بجودة عالية، مناسبة لليوتيوب،
-                    السناب، والتيك توك أو الحفلات الصغيرة.  
-                    <span class="highlight">يمكنك لاحقاً وضع زر شراء لكل ريمكس هنا.</span>
+                    ريمكس أجواء ليلية هادئة مع لمسة إلكترونية،
+                    مناسب للفيديوهات الهادئة والمقاطع السينمائية.
                 </p>
+                <div class="track-meta">
+                    الإيقاع: Chill · الجودة الكاملة: WAV + MP3
+                </div>
+                <div class="price-tag">السعر: 15$</div>
+
+                <div class="audio-row">
+                    <div class="audio-label">معاينة (15 ثانية):</div>
+                    <audio class="preview-15" controls>
+                        <!-- ضع هنا رابط ملف المعاينة (ملف قصير 15 ثانية) -->
+                        <source src="tracks/midnight-vibes-preview.mp3" type="audio/mpeg">
+                        متصفحك لا يدعم تشغيل الصوت.
+                    </audio>
+
+                    <!-- زر شراء التراك الكامل -->
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+                        <input type="hidden" name="cmd" value="_xclick">
+                        <input type="hidden" name="business" value="fahadtime91@gmail.com">
+                        <input type="hidden" name="item_name" value="Remix – Midnight Vibes (Full Track)">
+                        <input type="hidden" name="amount" value="15.00">
+                        <input type="hidden" name="currency_code" value="USD">
+                        <button type="submit" class="btn-primary btn-small">
+                            شراء النسخة الكاملة
+                        </button>
+                    </form>
+                </div>
             </div>
+
+            <!-- تراك 2 -->
             <div class="card">
-                <h3>توزيع موسيقي مخصص باسمك</h3>
+                <h3>Intro – FAHAD TIME Signature</h3>
                 <p>
-                    تواصل معي لعمل توزيع خاص يحمل أسلوب FAHAD TIME
-                    لكن بطابعك أنت: اسمك، هويتك، والجملة الصوتية الخاصة فيك.
+                    مقدمة قوية تحمل أسلوب FAHAD TIME،
+                    مناسبة لافتتاحية الفيديوهات أو البودكاست، مع إمكانية تخصيص الاسم.
                 </p>
+                <div class="track-meta">
+                    الطول: 20–30 ثانية · يمكن تخصيصها باسمك
+                </div>
+                <div class="price-tag">السعر: 10$</div>
+
+                <div class="audio-row">
+                    <div class="audio-label">معاينة (15 ثانية):</div>
+                    <audio class="preview-15" controls>
+                        <!-- غيّر الرابط لملف المعاينة الخاص بهذا التراك -->
+                        <source src="tracks/intro-signature-preview.mp3" type="audio/mpeg">
+                        متصفحك لا يدعم تشغيل الصوت.
+                    </audio>
+
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+                        <input type="hidden" name="cmd" value="_xclick">
+                        <input type="hidden" name="business" value="fahadtime91@gmail.com">
+                        <input type="hidden" name="item_name" value="Intro – FAHAD TIME Signature (Full)">
+                        <input type="hidden" name="amount" value="10.00">
+                        <input type="hidden" name="currency_code" value="USD">
+                        <button type="submit" class="btn-primary btn-small">
+                            شراء النسخة الكاملة
+                        </button>
+                    </form>
+                </div>
             </div>
-            <div class="card" id="contact">
-                <h3>طريقة التواصل والشراء</h3>
+
+            <!-- تراك 3 -->
+            <div class="card">
+                <h3>Special Remix – Custom Project</h3>
                 <p>
-                    حالياً الطلبات تتم يدوياً عن طريق:
+                    ريمكس أو توزيع خاص يُنفّذ حسب طلبك: اختيار الأغنية، الإيقاع، المقام
+                    والأسلوب، مع تسليم نسخة جاهزة للنشر.
+                </p>
+                <div class="track-meta">
+                    يتم الاتفاق على السعر حسب الطلب
+                </div>
+                <div class="audio-row">
+                    <div class="audio-label">
+                        يمكنك الاستماع لأي عمل سابق من أعمالي على المنصات،
+                        ثم التواصل معي لطلب عمل خاص.
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- قسم معلومات الدفع -->
+    <section class="section" id="payment-info">
+        <h2 class="section-title">طريقة الدفع وتفعيل التحميل</h2>
+        <p class="section-subtitle">
+            إن كنت تريد تفعيل <span class="highlight">مزايا التحميل</span> وشراء التراكات بشكل فردي،
+            اضغط زر الشراء بجانب كل أغنية، وسيتم توجيهك إلى PayPal.
+        </p>
+
+        <div class="cards">
+            <div class="card">
+                <h3>الدفع عبر PayPal</h3>
+                <p>
+                    يتم الدفع على إيميل PayPal الرسمي:
                     <br><br>
-                    - واتساب: <span class="highlight">اكتب رقمك هنا</span><br>
-                    - إنستقرام: <span class="highlight">@حط_اليوزر_هنا</span><br><br>
-                    لاحقاً نقدر نضيف زر دفع أونلاين وروابط تحميل تلقائية بعد الدفع.
+                    <span class="highlight">fahadtime91@gmail.com</span>
+                    <br><br>
+                    • عند الضغط على زر الشراء لأي تراك، سيتم فتح صفحة PayPal بشكل آمن.<br>
+                    • تأكد من أن الإيميل الظاهر في صفحة الدفع هو نفس الإيميل أعلاه.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>بعد الدفع</h3>
+                <p>
+                    بعد إكمال عملية الدفع:
+                    <br><br>
+                    • احتفظ برقم العملية (Transaction ID) أو لقطة شاشة.<br>
+                    • أرسل لي تفاصيل التراك الذي اشتريته ووسيلة التواصل المفضلة.<br><br>
+                    مثال:<br>
+                    - اشتريت: <span class="highlight">Remix – Midnight Vibes</span><br>
+                    - الإيميل أو الواتساب لاستلام الرابط.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>استلام رابط التحميل</h3>
+                <p>
+                    يتم إرسال رابط تحميل النسخة الكاملة من الأغنية أو الريمكس
+                    بشكل يدوي بعد التأكد من الدفع.
+                    <br><br>
+                    يمكنك وضع هنا لاحقاً:<br>
+                    • رقم واتسابك<br>
+                    • حساب إنستقرامك<br>
+                    • أو إيميل للتواصل المباشر.
                 </p>
             </div>
         </div>
     </section>
 
     <footer class="footer">
-        © <span class="highlight">FAHAD TIME</span> – جميع الحقوق محفوظة.  
-        هذا الموقع قيد التطوير، وسيتم إضافة المزيد من التراكات والخيارات قريباً بإذن الله.
+        © <span>FAHAD TIME</span> – جميع الحقوق محفوظة.  
+        هذا الموقع قيد التطوير، وسيتم إضافة المزيد من التراكات ومزايا التحميل قريباً بإذن الله.
     </footer>
+
+    <!-- سكربت لتحديد المعاينة بـ 15 ثانية -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var maxPreview = 15; // عدد الثواني للمعاينة
+            var previews = document.querySelectorAll('audio.preview-15');
+
+            previews.forEach(function (audio) {
+                audio.addEventListener('timeupdate', function () {
+                    if (audio.currentTime > maxPreview) {
+                        audio.pause();
+                        audio.currentTime = 0;
+                    }
+                });
+            });
+        });
+    </script>
 
 </body>
 </html>
