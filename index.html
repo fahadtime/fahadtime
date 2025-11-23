@@ -400,7 +400,7 @@
             <a href="cart.html" class="nav-link nav-link-accent">
                 <span>سلة المشتريات</span><span class="en">Cart</span>
             </a>
-            <a href="checkout.html" class="nav-link">
+            <a href="checkout/checkout.html" class="nav-link">
                 <span>إتمام الشراء</span><span class="en">Checkout</span>
             </a>
             <a href="register.html" class="nav-link">
@@ -412,17 +412,17 @@
     <!-- الهيرو -->
     <section id="hero" class="hero">
         <div class="hero-tag">
-            🎚️ استديو موسيقي رقمي • Digital Music Studio
+            🎚️ استماع فقط قبل الدفع • Listen only before purchase
         </div>
         <h1 class="hero-title">
             متجر FAHAD TIME للأعمال الموسيقية
             <span class="en">FAHAD TIME Official Music Store</span>
         </h1>
         <p class="hero-subtitle">
-            هنا تلاقي الريمكسات، الفنكيات، والتوزيعات الحصرية بأسلوب
-            <span class="highlight">FAHAD TIME</span>.
+            يمكنك الاستماع للمعاينة من الموقع، ولا يمكن تحميل النسخة الكاملة
+            إلا بعد الدفع، حيث يتم إرسال رابط التحميل إلى بريدك الإلكتروني.
             <span class="en">
-                Browse exclusive remixes, funk tracks and custom compositions by FAHAD TIME.
+                You can listen to previews only. Full-quality downloads are sent by email after payment is confirmed.
             </span>
         </p>
         <div class="hero-buttons">
@@ -445,7 +445,7 @@
                 <span class="en">Remixes</span>
             </h2>
             <p class="section-subtitle">
-                ريمكسات حصرية بجودة عالية، مع إمكانية الاستماع قبل الشراء.
+                استمع للريمكس من هنا، والنسخة الكاملة ذات الجودة العالية يتم إرسالها بعد الدفع.
             </p>
         </div>
 
@@ -462,13 +462,13 @@
                         أجواء حماسية للفيديوهات والريلز.
                     </p>
                     <div class="track-meta">
-                        الجودة الكاملة: WAV + MP3.
+                        ملاحظة: الصوت هنا للمعاينة والاستماع فقط، النسخة الكاملة ترسل على الإيميل بعد الدفع.
                     </div>
                     <div class="price-tag">السعر / Price: 15 USD</div>
 
                     <div class="audio-row">
-                        <div class="audio-label">معاينة كاملة (استماع فقط):</div>
-                        <audio controls>
+                        <div class="audio-label">استماع / Listen:</div>
+                        <audio controls controlslist="nodownload noplaybackrate" oncontextmenu="return false;">
                             <source src="tracks/time-liljon-get-low.mp3" type="audio/mpeg" />
                             متصفحك لا يدعم تشغيل الصوت.
                         </audio>
@@ -479,7 +479,7 @@
                             <input type="hidden" name="item_name" value="FT-REMIX-001 – TIME (LIL JON – GET LOW) – FULL VERSION" />
                             <input type="hidden" name="amount" value="15.00" />
                             <input type="hidden" name="currency_code" value="USD" />
-                            <input type="hidden" name="return" value="https://fahadtime.github.io/fahadtime/thanks.html" />
+                            <input type="hidden" name="return" value="https://fahadtime.github.io/fahadtime/checkout/checkout.html" />
                             <button type="submit" class="btn-primary btn-small">
                                 شراء النسخة الكاملة
                                 <span class="en">Buy Full Track</span>
@@ -499,12 +499,12 @@
                 <span class="en">Funk & Groovy</span>
             </h2>
             <p class="section-subtitle">
-                تراكات فنك مناسبة للريلز والمحتوى القصير.
+                تراكات فنك للاستماع من الموقع فقط، والنسخة الكاملة ترسل بعد الدفع.
             </p>
         </div>
 
         <div class="cards">
-            <!-- مثال قديم -->
+            <!-- مثال -->
             <article class="card">
                 <div class="card-inner">
                     <div class="card-label">Funk · Groovy</div>
@@ -532,13 +532,13 @@
                         <span class="highlight">FAHAD TIME</span>.
                     </p>
                     <div class="track-meta">
-                        الجودة الكاملة: WAV + MP3.
+                        الصوت هنا للمعاينة والاستماع فقط، النسخة الكاملة والإصدار النهائي ترسل بعد الدفع.
                     </div>
                     <div class="price-tag">السعر / Price: 15 USD</div>
 
                     <div class="audio-row">
-                        <div class="audio-label">معاينة صوت (استماع فقط):</div>
-                        <audio controls>
+                        <div class="audio-label">استماع / Listen:</div>
+                        <audio controls controlslist="nodownload noplaybackrate" oncontextmenu="return false;">
                             <source src="tracks/130-طلعت-شقلباظ.mp3" type="audio/mpeg" />
                             متصفحك لا يدعم تشغيل الصوت.
                         </audio>
@@ -549,7 +549,7 @@
                             <input type="hidden" name="item_name" value="FT-FUNK-001 – 130 Talaat Shaqlabaz – FULL VERSION" />
                             <input type="hidden" name="amount" value="15.00" />
                             <input type="hidden" name="currency_code" value="USD" />
-                            <input type="hidden" name="return" value="https://fahadtime.github.io/fahadtime/thanks.html" />
+                            <input type="hidden" name="return" value="https://fahadtime.github.io/fahadtime/checkout/checkout.html" />
                             <button type="submit" class="btn-primary btn-small">
                                 شراء النسخة الكاملة
                                 <span class="en">Buy Full Track</span>
@@ -581,7 +581,7 @@
                         توزيع كامل + لحن خاص
                         <span class="en">Full Custom Arrangement</span>
                     </h3>
-                    <p>يتم الاتفاق على السعر بعد التواصل معك.</p>
+                    <p>يتم الاتفاق على التفاصيل والسعر بعد التواصل معك.</p>
                 </div>
             </article>
 
@@ -606,7 +606,7 @@
                 <span class="en">Payment & Downloads</span>
             </h2>
             <p class="section-subtitle">
-                الدفع يتم حالياً عبر PayPal، واستلام الأغنية يكون يدوياً عن طريق الإيميل بعد التأكد من العملية.
+                الدفع يتم حالياً عبر PayPal، واستلام النسخة الكاملة يكون عبر بريدك الإلكتروني بعد تعبئة النموذج.
             </p>
         </div>
 
@@ -619,12 +619,14 @@
                         <span class="en">Pay with PayPal</span>
                     </h3>
                     <p>
-                        الإيميل المستخدم:
+                        الإيميل المستخدم للدفع:
                         <br><br>
                         <span class="highlight">fahadtime91@gmail.com</span>
                         <br><br>
-                        بعد الدفع سيتم إرسال النسخة الكاملة إلى بريدك الإلكتروني
-                        الذي تذكره في صفحة <a href="checkout.html" style="color: var(--accent-cyan);">إتمام الشراء</a>.
+                        بعد الدفع:
+                        <br>1️⃣ سيتم تحويلك إلى صفحة <a href="checkout/checkout.html" style="color: var(--accent-cyan);">إتمام الشراء</a><br>
+                        2️⃣ تعبئ نموذج Google Form<br>
+                        3️⃣ سيتم إرسال رابط تحميل النسخة الكاملة إلى بريدك.
                     </p>
                 </div>
             </article>
@@ -633,7 +635,7 @@
 
     <footer class="footer">
         © <span>FAHAD TIME</span> – متجر الأعمال الموسيقية.  
-        Frontend only – يحتاج ربط بخلفية (Backend) لحفظ بيانات الأعضاء والمبيعات.
+        الاستماع من الموقع فقط، والتحميل متاح بعد الدفع عن طريق البريد الإلكتروني.
     </footer>
 </body>
 </html>
