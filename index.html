@@ -2,7 +2,7 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <title>FAHAD TIME - متجر الأغاني والريمكسات</title>
+    <title>FAHAD TIME - متجر الريمكسات</title>
     <style>
         body {
             margin: 0;
@@ -16,7 +16,7 @@
         }
 
         .hero {
-            min-height: 70vh;
+            min-height: 60vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -34,7 +34,7 @@
         }
 
         .title {
-            font-size: 2.4rem;
+            font-size: 2.2rem;
             margin: 0.2rem 0 0.5rem;
             color: #facc15;
         }
@@ -223,88 +223,54 @@
     <section class="hero">
         <div class="logo">FAHAD TIME</div>
         <div class="badge">ريمكسات · توزيعات · أعمال خاصة</div>
-        <h1 class="title">متجر الأغاني والريمكسات لـ FAHAD TIME</h1>
+        <h1 class="title">متجر الريمكسات الرسمي لـ FAHAD TIME</h1>
         <p class="subtitle">
-            استمع أولاً لمعاينة قصيرة (15 ثانية)، وإذا حبيت التراك
+            استمع لمعاينة 15 ثانية من الريمكس، وإذا أعجبك
             تقدر تشتري النسخة الكاملة مباشرة عبر <span class="highlight">PayPal</span>،
             ويتم إرسال رابط التحميل لك بعد الدفع.
         </p>
 
         <div class="btns">
-            <a href="#tracks" class="btn-primary">استعرض التراكات</a>
-            <a href="#payment-info" class="btn-secondary">شرح طريقة الدفع</a>
+            <a href="#tracks" class="btn-primary">استعرض الريمكسات</a>
         </div>
     </section>
 
-    <!-- قسم التراكات مع المعاينة والشراء -->
+    <!-- قسم التراكات -->
     <section class="section" id="tracks">
-        <h2 class="section-title">تراكات متاحة للشراء الفردي</h2>
+        <h2 class="section-title">تراك متاح للشراء</h2>
         <p class="section-subtitle">
-            كل تراك يحتوي على معاينة قصيرة (15 ثانية) للاستماع قبل الشراء،
-            وزر دفع خاص به لشراء النسخة الكاملة.
+            مثال على تراك واحد جاهز للمعاينة والشراء. لاحقاً تقدر تضيف المزيد بنفس الطريقة.
         </p>
 
         <div class="cards">
 
-            <!-- تراك 1 -->
+            <!-- تراك TIME – LIL JON GET LOW -->
             <div class="card">
-                <h3>Remix – Midnight Vibes</h3>
+                <h3>Remix – T I M E (LIL JON – GET LOW)</h3>
                 <p>
-                    ريمكس أجواء ليلية هادئة مع لمسة إلكترونية،
-                    مناسب للفيديوهات الهادئة والمقاطع السينمائية.
+                    ريمكس قوي بطابع <span class="highlight">FAHAD TIME</span>  
+                    لأغنية GET LOW، أجواء حماسية مناسبة للفيديوهات، الجيم، والريلز.
                 </p>
+
                 <div class="track-meta">
-                    الإيقاع: Chill · الجودة الكاملة: WAV + MP3
+                    الجودة الكاملة: WAV + MP3 · ريمكس حصري
                 </div>
+
                 <div class="price-tag">السعر: 15$</div>
 
                 <div class="audio-row">
                     <div class="audio-label">معاينة (15 ثانية):</div>
+
                     <audio class="preview-15" controls>
-                        <!-- ضع هنا رابط ملف المعاينة (ملف قصير<div class="card">
-    <h3>Remix – T I M E (LIL JON – GET LOW)</h3>
-    <p>
-        ريمكس قوي بطابع <span class="highlight">FAHAD TIME</span>  
-        لأغنية GET LOW مع لمسة توزيع حديثة.  
-        مناسب للفيديوهات، الريلز، الجيم، والمحتوى الحماسي.
-    </p>
-
-    <div class="track-meta">
-        الجودة الكاملة: WAV + MP3 · ريمكس حصري
-    </div>
-
-    <div class="price-tag">السعر: 15$</div>
-
-    <div class="audio-row">
-        <div class="audio-label">معاينة (15 ثانية):</div>
-
-        <audio class="preview-15" controls>
-            <source src="tracks/time-liljon-get-low.mp3" type="audio/mpeg">
-            متصفحك لا يدعم تشغيل الصوت.
-        </audio>
-
-        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
-            <input type="hidden" name="cmd" value="_xclick">
-            <input type="hidden" name="business" value="fahadtime91@gmail.com">
-            <input type="hidden" name="item_name" value="Remix – TIME (LIL JON – GET LOW) FULL VERSION">
-            <input type="hidden" name="amount" value="15.00">
-            <input type="hidden" name="currency_code" value="USD">
-            <button type="submit" class="btn-primary btn-small">
-                شراء النسخة الكاملة
-            </button>
-        </form>
-    </div>
-</div>
- 15 ثانية) -->
-                        <source src="tracks/midnight-vibes-preview.mp3" type="audio/mpeg">
+                        <source src="tracks/time-liljon-get-low.mp3" type="audio/mpeg">
                         متصفحك لا يدعم تشغيل الصوت.
                     </audio>
 
-                    <!-- زر شراء التراك الكامل -->
+                    <!-- زر شراء النسخة الكاملة -->
                     <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
                         <input type="hidden" name="cmd" value="_xclick">
                         <input type="hidden" name="business" value="fahadtime91@gmail.com">
-                        <input type="hidden" name="item_name" value="Remix – Midnight Vibes (Full Track)">
+                        <input type="hidden" name="item_name" value="Remix – TIME (LIL JON – GET LOW) FULL VERSION">
                         <input type="hidden" name="amount" value="15.00">
                         <input type="hidden" name="currency_code" value="USD">
                         <button type="submit" class="btn-primary btn-small">
@@ -314,112 +280,12 @@
                 </div>
             </div>
 
-            <!-- تراك 2 -->
-            <div class="card">
-                <h3>Intro – FAHAD TIME Signature</h3>
-                <p>
-                    مقدمة قوية تحمل أسلوب FAHAD TIME،
-                    مناسبة لافتتاحية الفيديوهات أو البودكاست، مع إمكانية تخصيص الاسم.
-                </p>
-                <div class="track-meta">
-                    الطول: 20–30 ثانية · يمكن تخصيصها باسمك
-                </div>
-                <div class="price-tag">السعر: 10$</div>
-
-                <div class="audio-row">
-                    <div class="audio-label">معاينة (15 ثانية):</div>
-                    <audio class="preview-15" controls>
-                        <!-- غيّر الرابط لملف المعاينة الخاص بهذا التراك -->
-                        <source src="tracks/intro-signature-preview.mp3" type="audio/mpeg">
-                        متصفحك لا يدعم تشغيل الصوت.
-                    </audio>
-
-                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
-                        <input type="hidden" name="cmd" value="_xclick">
-                        <input type="hidden" name="business" value="fahadtime91@gmail.com">
-                        <input type="hidden" name="item_name" value="Intro – FAHAD TIME Signature (Full)">
-                        <input type="hidden" name="amount" value="10.00">
-                        <input type="hidden" name="currency_code" value="USD">
-                        <button type="submit" class="btn-primary btn-small">
-                            شراء النسخة الكاملة
-                        </button>
-                    </form>
-                </div>
-            </div>
-
-            <!-- تراك 3 -->
-            <div class="card">
-                <h3>Special Remix – Custom Project</h3>
-                <p>
-                    ريمكس أو توزيع خاص يُنفّذ حسب طلبك: اختيار الأغنية، الإيقاع، المقام
-                    والأسلوب، مع تسليم نسخة جاهزة للنشر.
-                </p>
-                <div class="track-meta">
-                    يتم الاتفاق على السعر حسب الطلب
-                </div>
-                <div class="audio-row">
-                    <div class="audio-label">
-                        يمكنك الاستماع لأي عمل سابق من أعمالي على المنصات،
-                        ثم التواصل معي لطلب عمل خاص.
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- قسم معلومات الدفع -->
-    <section class="section" id="payment-info">
-        <h2 class="section-title">طريقة الدفع وتفعيل التحميل</h2>
-        <p class="section-subtitle">
-            إن كنت تريد تفعيل <span class="highlight">مزايا التحميل</span> وشراء التراكات بشكل فردي،
-            اضغط زر الشراء بجانب كل أغنية، وسيتم توجيهك إلى PayPal.
-        </p>
-
-        <div class="cards">
-            <div class="card">
-                <h3>الدفع عبر PayPal</h3>
-                <p>
-                    يتم الدفع على إيميل PayPal الرسمي:
-                    <br><br>
-                    <span class="highlight">fahadtime91@gmail.com</span>
-                    <br><br>
-                    • عند الضغط على زر الشراء لأي تراك، سيتم فتح صفحة PayPal بشكل آمن.<br>
-                    • تأكد من أن الإيميل الظاهر في صفحة الدفع هو نفس الإيميل أعلاه.
-                </p>
-            </div>
-
-            <div class="card">
-                <h3>بعد الدفع</h3>
-                <p>
-                    بعد إكمال عملية الدفع:
-                    <br><br>
-                    • احتفظ برقم العملية (Transaction ID) أو لقطة شاشة.<br>
-                    • أرسل لي تفاصيل التراك الذي اشتريته ووسيلة التواصل المفضلة.<br><br>
-                    مثال:<br>
-                    - اشتريت: <span class="highlight">Remix – Midnight Vibes</span><br>
-                    - الإيميل أو الواتساب لاستلام الرابط.
-                </p>
-            </div>
-
-            <div class="card">
-                <h3>استلام رابط التحميل</h3>
-                <p>
-                    يتم إرسال رابط تحميل النسخة الكاملة من الأغنية أو الريمكس
-                    بشكل يدوي بعد التأكد من الدفع.
-                    <br><br>
-                    يمكنك وضع هنا لاحقاً:<br>
-                    • رقم واتسابك<br>
-                    • حساب إنستقرامك<br>
-                    • أو إيميل للتواصل المباشر.
-                </p>
-            </div>
         </div>
     </section>
 
     <footer class="footer">
         © <span>FAHAD TIME</span> – جميع الحقوق محفوظة.  
-        هذا الموقع قيد التطوير، وسيتم إضافة المزيد من التراكات ومزايا التحميل قريباً بإذن الله.
+        هذا الموقع قيد التطوير، وسيتم إضافة المزيد من الريمكسات قريباً بإذن الله.
     </footer>
 
     <!-- سكربت لتحديد المعاينة بـ 15 ثانية -->
