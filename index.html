@@ -218,6 +218,11 @@
             opacity: 0.85;
         }
 
+        .btn-small {
+            padding: 0.55rem 1.3rem;
+            font-size: 0.82rem;
+        }
+
         /* Sections layout */
         .section {
             max-width: 1150px;
@@ -344,11 +349,6 @@
             max-width: 260px;
         }
 
-        .btn-small {
-            padding: 0.55rem 1.3rem;
-            font-size: 0.82rem;
-        }
-
         /* Footer */
         .footer {
             padding: 1.7rem 1.5rem 2.1rem;
@@ -432,8 +432,7 @@
             هنا تلاقي الريمكسات، الفنكيات، والتوزيعات الحصرية بأسلوب
             <span class="highlight">FAHAD TIME</span>، مع إمكانية الاستماع لمعاينة قصيرة قبل الشراء.
             <span class="en">
-                Here you can browse exclusive remixes, funk tracks, and custom compositions by FAHAD TIME,
-                with 15-second previews before you buy.
+                Browse exclusive remixes, funk tracks and custom compositions by FAHAD TIME, with 15-second previews before you buy.
             </span>
         </p>
         <div class="hero-buttons">
@@ -462,17 +461,17 @@
 
         <div class="cards">
 
-            <!-- مثال: ريمكس TIME – LIL JON GET LOW -->
+            <!-- ريمكس TIME – LIL JON GET LOW -->
             <article class="card">
                 <div class="card-inner">
                     <div class="card-label">Remix · حصري</div>
                     <h3>
                         ريمكس T I M E – LIL JON GET LOW
-                        <span class="en">FAHAD TIME Remix</span>
+                        <span class="en">FT-REMIX-001 · FAHAD TIME Remix</span>
                     </h3>
                     <p>
                         ريمكس قوي بطابع <span class="highlight">FAHAD TIME</span> لأغنية GET LOW،
-                        بأجواء حماسية مناسبة للفيديوهات، الجيم، الريلز، والحفلات الصغيرة.
+                        أجواء حماسية مناسبة للفيديوهات، الجيم، الريلز، والحفلات الصغيرة.
                     </p>
                     <div class="track-meta">
                         الجودة الكاملة: WAV + MP3 · ريمكس حصري · مناسب للنشر على المنصات
@@ -494,9 +493,11 @@
                         <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
                             <input type="hidden" name="cmd" value="_xclick" />
                             <input type="hidden" name="business" value="fahadtime91@gmail.com" />
-                            <input type="hidden" name="item_name" value="Remix – TIME (LIL JON – GET LOW) FULL VERSION" />
+                            <input type="hidden" name="item_name" value="FT-REMIX-001 – TIME (LIL JON – GET LOW) – FULL VERSION" />
                             <input type="hidden" name="amount" value="15.00" />
                             <input type="hidden" name="currency_code" value="USD" />
+                            <!-- بعد الدفع يعود الزائر لصفحة الشكر -->
+                            <input type="hidden" name="return" value="https://fahadtime.github.io/fahadtime/thanks.html" />
                             <button type="submit" class="btn-primary btn-small">
                                 شراء النسخة الكاملة
                                 <span class="en">Buy Full Track</span>
@@ -535,7 +536,7 @@
                         تراك فنكي بحس عصري مناسب للفيديوهات القصيرة.
                     </p>
                     <div class="track-meta">
-                        يمكنك لاحقاً إضافة معاينة صوتية و زر شراء لهذا القسم بنفس أسلوب الريمكسات.
+                        لاحقاً يمكنك إضافة معاينة صوتية وزر شراء لهذا القسم بنفس أسلوب قسم الريمكسات.
                     </div>
                 </div>
             </article>
@@ -623,8 +624,11 @@
                     <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" style="margin-top: 0.7rem;">
                         <input type="hidden" name="cmd" value="_xclick" />
                         <input type="hidden" name="business" value="fahadtime91@gmail.com" />
-                        <input type="hidden" name="item_name" value="تفعيل مزايا التحميل - متجر FAHAD TIME" />
+                        <input type="hidden" name="item_name" value="FT-ACCESS-001 – تفعيل مزايا التحميل - متجر FAHAD TIME" />
                         <input type="hidden" name="currency_code" value="USD" />
+                        <!-- يمكن ترك المبلغ فارغ ليحدده العميل أو تعيين مبلغ معين -->
+                        <!-- <input type="hidden" name="amount" value="10.00" /> -->
+                        <input type="hidden" name="return" value="https://fahadtime.github.io/fahadtime/thanks.html" />
                         <button type="submit" class="btn-primary btn-small">
                             إن كنت تريد تفعيل مزايا التحميل ادفع هنا
                             <span class="en">Activate Download Features</span>
@@ -643,11 +647,9 @@
                     <p>
                         بعد الدفع:
                         <br><br>
-                        • احتفظ برقم العملية (Transaction ID).<br>
-                        • أرسل تفاصيل التراك المطلوب ووسيلة التواصل (واتساب / إيميل / إنستقرام).<br><br>
-                        <span class="en">
-                            After payment, send your transaction ID and track details so we can send your download links.
-                        </span>
+                        • PayPal سيرسل لك إيصالاً على بريدك.<br>
+                        • وسيصلني أنا أيضاً إشعار يتضمن اسم التراك (من كود <span class="highlight">item_name</span>) وتفاصيل العملية.<br><br>
+                        بعد التأكد، يتم إرسال رابط التحميل للنسخة الكاملة على بريدك أو وسيلة التواصل التي تذكرها.
                     </p>
                 </div>
             </article>
