@@ -16,9 +16,7 @@
             --border-soft: rgba(148, 163, 184, 0.4);
         }
 
-        * {
-            box-sizing: border-box;
-        }
+        * { box-sizing: border-box; }
 
         body {
             margin: 0;
@@ -30,11 +28,9 @@
             color: var(--text-main);
         }
 
-        a {
-            text-decoration: none;
-        }
+        a { text-decoration: none; }
 
-        /* Top navigation (الهيدر) */
+        /* Top navigation */
         .top-nav {
             position: sticky;
             top: 0;
@@ -88,19 +84,19 @@
 
         .nav-links {
             display: flex;
-            gap: 1rem;
+            gap: 0.6rem;
             flex-wrap: wrap;
+            align-items: center;
         }
 
         .nav-link {
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             color: var(--text-muted);
-            padding: 0.4rem 0.9rem;
+            padding: 0.35rem 0.8rem;
             border-radius: 999px;
             border: 1px solid transparent;
             transition: all 0.15s ease;
-            cursor: pointer;
-            display: flex;
+            display: inline-flex;
             align-items: center;
             gap: 0.25rem;
         }
@@ -116,7 +112,12 @@
             color: #f9fafb;
         }
 
-        /* Hero section */
+        .nav-link-accent {
+            border-color: rgba(250, 204, 21, 0.8);
+            color: var(--accent-gold);
+        }
+
+        /* Hero */
         .hero {
             min-height: 70vh;
             display: flex;
@@ -223,7 +224,7 @@
             font-size: 0.82rem;
         }
 
-        /* Sections layout */
+        /* Sections */
         .section {
             max-width: 1150px;
             margin: 0 auto 3.2rem auto;
@@ -277,10 +278,7 @@
             pointer-events: none;
         }
 
-        .card-inner {
-            position: relative;
-            z-index: 1;
-        }
+        .card-inner { position: relative; z-index: 1; }
 
         .card-label {
             font-size: 0.75rem;
@@ -294,8 +292,7 @@
         }
 
         .card h3 {
-            margin: 0;
-            margin-bottom: 0.6rem;
+            margin: 0 0 0.6rem;
             font-size: 1.05rem;
             color: #f9fafb;
         }
@@ -307,8 +304,7 @@
         }
 
         .card p {
-            margin: 0;
-            margin-bottom: 0.8rem;
+            margin: 0 0 0.8rem;
             font-size: 0.9rem;
             color: var(--text-muted);
             line-height: 1.8;
@@ -359,25 +355,16 @@
             background: linear-gradient(to top, rgba(3, 7, 18, 0.95), rgba(15, 23, 42, 0.85));
         }
 
-        .footer span {
-            color: var(--accent-gold);
-        }
+        .footer span { color: var(--accent-gold); }
 
         @media (max-width: 640px) {
-            .hero-title {
-                font-size: 2rem;
-            }
-
-            .hero {
-                padding-top: 2.5rem;
-            }
-
+            .hero-title { font-size: 2rem; }
+            .hero { padding-top: 2.5rem; }
             .top-nav {
                 flex-direction: column;
                 align-items: flex-start;
                 gap: 0.7rem;
             }
-
             .nav-links {
                 width: 100%;
                 flex-wrap: wrap;
@@ -387,12 +374,10 @@
 </head>
 <body>
 
-    <!-- شريط علوي + أيقونة العودة للصفحة الرئيسية -->
+    <!-- الهيدر -->
     <header class="top-nav">
         <div class="nav-left">
-            <a href="#hero" class="home-icon" title="الصفحة الرئيسية / Home">
-                🏠
-            </a>
+            <a href="#hero" class="home-icon" title="الصفحة الرئيسية / Home">🏠</a>
             <div class="logo-text">
                 <span class="ar">متجر FAHAD TIME للأعمال الموسيقية</span>
                 <span class="en">FAHAD TIME Music Works Store</span>
@@ -401,25 +386,30 @@
 
         <nav class="nav-links">
             <a href="#remixes" class="nav-link">
-                <span>الريمكسات</span>
-                <span class="en">Remixes</span>
+                <span>الريمكسات</span><span class="en">Remixes</span>
             </a>
             <a href="#funk" class="nav-link">
-                <span>الفنكيات</span>
-                <span class="en">Funk & Groovy</span>
+                <span>الفنكيات</span><span class="en">Funk</span>
             </a>
             <a href="#composing" class="nav-link">
-                <span>التوزيع والألحان</span>
-                <span class="en">Composing & Arranging</span>
+                <span>التوزيع والألحان</span><span class="en">Composing</span>
             </a>
             <a href="#payment" class="nav-link">
-                <span>الدفع والتحميل</span>
-                <span class="en">Payment & Downloads</span>
+                <span>الدفع</span><span class="en">Payment</span>
+            </a>
+            <a href="cart.html" class="nav-link nav-link-accent">
+                <span>سلة المشتريات</span><span class="en">Cart</span>
+            </a>
+            <a href="checkout.html" class="nav-link">
+                <span>إتمام الشراء</span><span class="en">Checkout</span>
+            </a>
+            <a href="register.html" class="nav-link">
+                <span>تسجيل الأعضاء</span><span class="en">Register</span>
             </a>
         </nav>
     </header>
 
-    <!-- الهيرو / الرئيسية -->
+    <!-- الهيرو -->
     <section id="hero" class="hero">
         <div class="hero-tag">
             🎚️ استديو موسيقي رقمي • Digital Music Studio
@@ -430,9 +420,9 @@
         </h1>
         <p class="hero-subtitle">
             هنا تلاقي الريمكسات، الفنكيات، والتوزيعات الحصرية بأسلوب
-            <span class="highlight">FAHAD TIME</span>، مع إمكانية الاستماع لمعاينة قصيرة قبل الشراء.
+            <span class="highlight">FAHAD TIME</span>.
             <span class="en">
-                Browse exclusive remixes, funk tracks and custom compositions by FAHAD TIME, with 15-second previews before you buy.
+                Browse exclusive remixes, funk tracks and custom compositions by FAHAD TIME.
             </span>
         </p>
         <div class="hero-buttons">
@@ -447,7 +437,7 @@
         </div>
     </section>
 
-    <!-- قسم الريمكسات -->
+    <!-- الريمكسات -->
     <section id="remixes" class="section">
         <div class="section-header">
             <h2 class="section-title">
@@ -455,13 +445,11 @@
                 <span class="en">Remixes</span>
             </h2>
             <p class="section-subtitle">
-                ريمكسات حصرية بجودة عالية، مع معاينة قصيرة، وشراء فردي لكل عمل.
+                ريمكسات حصرية بجودة عالية، مع إمكانية الاستماع قبل الشراء.
             </p>
         </div>
 
         <div class="cards">
-
-            <!-- ريمكس TIME – LIL JON GET LOW -->
             <article class="card">
                 <div class="card-inner">
                     <div class="card-label">Remix · حصري</div>
@@ -471,32 +459,26 @@
                     </h3>
                     <p>
                         ريمكس قوي بطابع <span class="highlight">FAHAD TIME</span> لأغنية GET LOW،
-                        أجواء حماسية مناسبة للفيديوهات، الجيم، الريلز، والحفلات الصغيرة.
+                        أجواء حماسية للفيديوهات والريلز.
                     </p>
                     <div class="track-meta">
-                        الجودة الكاملة: WAV + MP3 · ريمكس حصري · مناسب للنشر على المنصات
+                        الجودة الكاملة: WAV + MP3.
                     </div>
-                    <div class="price-tag">
-                        السعر / Price: 15 USD
-                    </div>
+                    <div class="price-tag">السعر / Price: 15 USD</div>
 
                     <div class="audio-row">
-                        <div class="audio-label">
-                            معاينة (0 → 15 ثانية) · Preview:
-                        </div>
-                        <audio class="preview-15" controls>
+                        <div class="audio-label">معاينة كاملة (استماع فقط):</div>
+                        <audio controls>
                             <source src="tracks/time-liljon-get-low.mp3" type="audio/mpeg" />
                             متصفحك لا يدعم تشغيل الصوت.
                         </audio>
 
-                        <!-- زر شراء النسخة الكاملة عبر PayPal -->
                         <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
                             <input type="hidden" name="cmd" value="_xclick" />
                             <input type="hidden" name="business" value="fahadtime91@gmail.com" />
                             <input type="hidden" name="item_name" value="FT-REMIX-001 – TIME (LIL JON – GET LOW) – FULL VERSION" />
                             <input type="hidden" name="amount" value="15.00" />
                             <input type="hidden" name="currency_code" value="USD" />
-                            <!-- بعد الدفع يعود الزائر لصفحة الشكر -->
                             <input type="hidden" name="return" value="https://fahadtime.github.io/fahadtime/thanks.html" />
                             <button type="submit" class="btn-primary btn-small">
                                 شراء النسخة الكاملة
@@ -506,24 +488,23 @@
                     </div>
                 </div>
             </article>
-
         </div>
     </section>
 
-    <!-- قسم الفنكيات -->
+    <!-- الفنكيات -->
     <section id="funk" class="section">
         <div class="section-header">
             <h2 class="section-title">
                 قسم الفنكيات
-                <span class="en">Funk & Groovy Tracks</span>
+                <span class="en">Funk & Groovy</span>
             </h2>
             <p class="section-subtitle">
-                تراكات فنك وحركات إيقاعية مناسبة للريلز، المقاطع القصيرة، والبروموهات.
+                تراكات فنك مناسبة للريلز والمحتوى القصير.
             </p>
         </div>
 
         <div class="cards">
-            <!-- كرت توضيحي قديم (تقدر تعدله لاحقاً) -->
+            <!-- مثال قديم -->
             <article class="card">
                 <div class="card-inner">
                     <div class="card-label">Funk · Groovy</div>
@@ -531,12 +512,9 @@
                         نموذج فنكي / Funky Example Track
                         <span class="en">Sample Funk Beat</span>
                     </h3>
-                    <p>
-                        هذا مجرد مثال يمكن استبداله لاحقاً بتراك حقيقي من أعمالك.
-                        تراك فنكي بحس عصري مناسب للفيديوهات القصيرة.
-                    </p>
+                    <p>مثال يمكن تغييره لاحقاً بتراك حقيقي.</p>
                     <div class="track-meta">
-                        لاحقاً يمكنك إضافة معاينة صوتية وزر شراء لهذا القسم بنفس أسلوب قسم الريمكسات.
+                        يمكنك استبدال هذا الكرت لاحقاً.
                     </div>
                 </div>
             </article>
@@ -545,33 +523,26 @@
             <article class="card">
                 <div class="card-inner">
                     <div class="card-label">Funk · Groovy</div>
-
                     <h3>
                         فنكيات – 130 طلعت شقلباظ
                         <span class="en">FT-FUNK-001 · 130 Talaat Shaqlabaz – FAHAD TIME</span>
                     </h3>
-
                     <p>
                         فنكية إيقاعية حماسية على سرعة 130 BPM بأسلوب
-                        <span class="highlight">FAHAD TIME</span>، مناسبة للريلز، المقاطع السريعة،
-                        والمحتوى الحركي.
+                        <span class="highlight">FAHAD TIME</span>.
                     </p>
-
                     <div class="track-meta">
-                        الجودة الكاملة: WAV + MP3 · تراك فنكي حصري يمكن استخدامه في مشاريعك المرئية.
+                        الجودة الكاملة: WAV + MP3.
                     </div>
-
                     <div class="price-tag">السعر / Price: 15 USD</div>
 
                     <div class="audio-row">
-                        <div class="audio-label">معاينة (من 13 ثانية إلى 30 ثانية):</div>
-
-                        <audio class="funk-preview" controls>
+                        <div class="audio-label">معاينة صوت (استماع فقط):</div>
+                        <audio controls>
                             <source src="tracks/130-طلعت-شقلباظ.mp3" type="audio/mpeg" />
                             متصفحك لا يدعم تشغيل الصوت.
                         </audio>
 
-                        <!-- زر شراء النسخة الكاملة عبر PayPal -->
                         <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
                             <input type="hidden" name="cmd" value="_xclick" />
                             <input type="hidden" name="business" value="fahadtime91@gmail.com" />
@@ -579,7 +550,6 @@
                             <input type="hidden" name="amount" value="15.00" />
                             <input type="hidden" name="currency_code" value="USD" />
                             <input type="hidden" name="return" value="https://fahadtime.github.io/fahadtime/thanks.html" />
-
                             <button type="submit" class="btn-primary btn-small">
                                 شراء النسخة الكاملة
                                 <span class="en">Buy Full Track</span>
@@ -588,11 +558,10 @@
                     </div>
                 </div>
             </article>
-
         </div>
     </section>
 
-    <!-- قسم التوزيع والألحان -->
+    <!-- التوزيع والألحان -->
     <section id="composing" class="section">
         <div class="section-header">
             <h2 class="section-title">
@@ -600,7 +569,7 @@
                 <span class="en">Composing & Arranging</span>
             </h2>
             <p class="section-subtitle">
-                طلب أعمال خاصة: توزيع، ألحان، خلفيات موسيقية، Intro/Outro وغيرها.
+                طلب أعمال خاصة: توزيع، ألحان، خلفيات موسيقية، Intro/Outro.
             </p>
         </div>
 
@@ -612,13 +581,7 @@
                         توزيع كامل + لحن خاص
                         <span class="en">Full Custom Arrangement</span>
                     </h3>
-                    <p>
-                        يمكنك طلب توزيع كامل لأغنية أو مشروع خاص، مع اختيار الإيقاع، الجو، المقام،
-                        وطريقة التقديم بأسلوب FAHAD TIME.
-                    </p>
-                    <div class="track-meta">
-                        السعر حسب حجم العمل والتفاصيل · يتم الاتفاق بعد التواصل.
-                    </div>
+                    <p>يتم الاتفاق على السعر بعد التواصل معك.</p>
                 </div>
             </article>
 
@@ -629,19 +592,13 @@
                         مقدمة وخاتمة لقناتك
                         <span class="en">Channel Intro / Outro</span>
                     </h3>
-                    <p>
-                        إنشاء مقدمة موسيقية خاصة لقناتك مع اسمك أو شعارك الصوتي،
-                        يمكن استخدامها في كل فيديوهاتك بشكل ثابت.
-                    </p>
-                    <div class="track-meta">
-                        مناسب للبودكاست، اليوتيوب، والتيك توك.
-                    </div>
+                    <p>مقدمات خاصة للبودكاست واليوتيوب والتيك توك.</p>
                 </div>
             </article>
         </div>
     </section>
 
-    <!-- قسم الدفع والتحميل -->
+    <!-- الدفع -->
     <section id="payment" class="section">
         <div class="section-header">
             <h2 class="section-title">
@@ -649,7 +606,7 @@
                 <span class="en">Payment & Downloads</span>
             </h2>
             <p class="section-subtitle">
-                إن كنت تريد تفعيل مزايا التحميل وشراء الأعمال الموسيقية بشكل آمن، يمكنك الدفع عبر PayPal.
+                الدفع يتم حالياً عبر PayPal، واستلام الأغنية يكون يدوياً عن طريق الإيميل بعد التأكد من العملية.
             </p>
         </div>
 
@@ -662,43 +619,12 @@
                         <span class="en">Pay with PayPal</span>
                     </h3>
                     <p>
-                        يتم الدفع حالياً عبر <span class="highlight">PayPal</span> على الإيميل:
+                        الإيميل المستخدم:
                         <br><br>
                         <span class="highlight">fahadtime91@gmail.com</span>
                         <br><br>
-                        يمكنك استخدام الأزرار الموجودة بجانب كل تراك،
-                        أو استخدام هذا الزر لتفعيل مزايا التحميل بشكل عام.
-                    </p>
-
-                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" style="margin-top: 0.7rem;">
-                        <input type="hidden" name="cmd" value="_xclick" />
-                        <input type="hidden" name="business" value="fahadtime91@gmail.com" />
-                        <input type="hidden" name="item_name" value="FT-ACCESS-001 – تفعيل مزايا التحميل - متجر FAHAD TIME" />
-                        <input type="hidden" name="currency_code" value="USD" />
-                        <!-- يمكن ترك المبلغ فارغ ليحدده العميل أو تعيين مبلغ معين -->
-                        <!-- <input type="hidden" name="amount" value="10.00" /> -->
-                        <input type="hidden" name="return" value="https://fahadtime.github.io/fahadtime/thanks.html" />
-                        <button type="submit" class="btn-primary btn-small">
-                            إن كنت تريد تفعيل مزايا التحميل ادفع هنا
-                            <span class="en">Activate Download Features</span>
-                        </button>
-                    </form>
-                </div>
-            </article>
-
-            <article class="card">
-                <div class="card-inner">
-                    <div class="card-label">بعد الدفع · After Payment</div>
-                    <h3>
-                        استلام الروابط
-                        <span class="en">Receiving Downloads</span>
-                    </h3>
-                    <p>
-                        بعد الدفع:
-                        <br><br>
-                        • PayPal سيرسل لك إيصالاً على بريدك.<br>
-                        • وسيصلني أنا أيضاً إشعار يتضمن اسم التراك (من كود <span class="highlight">item_name</span>) وتفاصيل العملية.<br><br>
-                        بعد التأكد، يتم إرسال رابط التحميل للنسخة الكاملة على بريدك أو وسيلة التواصل التي تذكرها.
+                        بعد الدفع سيتم إرسال النسخة الكاملة إلى بريدك الإلكتروني
+                        الذي تذكره في صفحة <a href="checkout.html" style="color: var(--accent-cyan);">إتمام الشراء</a>.
                     </p>
                 </div>
             </article>
@@ -707,41 +633,7 @@
 
     <footer class="footer">
         © <span>FAHAD TIME</span> – متجر الأعمال الموسيقية.  
-        This site is under active development. More tracks and features coming soon.
+        Frontend only – يحتاج ربط بخلفية (Backend) لحفظ بيانات الأعضاء والمبيعات.
     </footer>
-
-    <!-- سكربت المعاينات -->
-    <script>
-    document.addEventListener("DOMContentLoaded", function () {
-        // معاينة الريمكسات: 0 → 15 ثانية
-        var maxPreview = 15;
-        var previews = document.querySelectorAll("audio.preview-15");
-
-        previews.forEach(function (audio) {
-            audio.addEventListener("timeupdate", function () {
-                if (audio.currentTime > maxPreview) {
-                    audio.pause();
-                    audio.currentTime = 0;
-                }
-            });
-        });
-
-        // معاينة الفنكيات: 13 → 30 ثانية
-        var funkPlayers = document.querySelectorAll("audio.funk-preview");
-
-        funkPlayers.forEach(function (audio) {
-            audio.addEventListener("loadedmetadata", function () {
-                audio.currentTime = 13;
-            });
-
-            audio.addEventListener("timeupdate", function () {
-                if (audio.currentTime >= 30) {
-                    audio.pause();
-                    audio.currentTime = 13;
-                }
-            });
-        });
-    });
-    </script>
 </body>
 </html>
