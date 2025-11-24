@@ -412,17 +412,17 @@
     <!-- الهيرو -->
     <section id="hero" class="hero">
         <div class="hero-tag">
-            🎚️ استماع فقط قبل الدفع • Listen only before purchase
+            🎚️ معاينة 15 ثانية فقط • 12s → 27s Preview
         </div>
         <h1 class="hero-title">
             متجر FAHAD TIME للأعمال الموسيقية
             <span class="en">FAHAD TIME Official Music Store</span>
         </h1>
         <p class="hero-subtitle">
-            يمكنك الاستماع للمعاينة من الموقع، ولا يمكن تحميل النسخة الكاملة
-            إلا بعد الدفع، حيث يتم إرسال رابط التحميل إلى بريدك الإلكتروني.
+            يمكنك الاستماع لمعاينة من 12 ثانية إلى 27 ثانية فقط من كل عمل.
+            لا يمكن تحميل النسخة الكاملة من الموقع، ويتم إرسالها إلى بريدك الإلكتروني بعد الدفع.
             <span class="en">
-                You can listen to previews only. Full-quality downloads are sent by email after payment is confirmed.
+                You can listen to a 15-second preview (12s → 27s). Full-quality downloads are sent by email after payment only.
             </span>
         </p>
         <div class="hero-buttons">
@@ -445,7 +445,7 @@
                 <span class="en">Remixes</span>
             </h2>
             <p class="section-subtitle">
-                استمع للريمكس من هنا، والنسخة الكاملة ذات الجودة العالية يتم إرسالها بعد الدفع.
+                استمع لمعاينة 15 ثانية فقط، والنسخة الكاملة تُرسل لبريدك بعد الدفع عبر PayPal.
             </p>
         </div>
 
@@ -462,23 +462,25 @@
                         أجواء حماسية للفيديوهات والريلز.
                     </p>
                     <div class="track-meta">
-                        ملاحظة: الصوت هنا للمعاينة والاستماع فقط، النسخة الكاملة ترسل على الإيميل بعد الدفع.
+                        ملاحظة: ما تسمعه هنا هو معاينة قصيرة 15 ثانية فقط لغرض الاستماع، وليس ملف التحميل الكامل.
                     </div>
                     <div class="price-tag">السعر / Price: 15 USD</div>
 
                     <div class="audio-row">
-                        <div class="audio-label">استماع / Listen:</div>
-                        <audio controls controlslist="nodownload noplaybackrate" oncontextmenu="return false;">
+                        <div class="audio-label">معاينة 15 ثانية (12s → 27s):</div>
+                        <audio class="preview-15" controls controlslist="nodownload noplaybackrate" oncontextmenu="return false;">
                             <source src="tracks/time-liljon-get-low.mp3" type="audio/mpeg" />
                             متصفحك لا يدعم تشغيل الصوت.
                         </audio>
 
+                        <!-- PayPal: تحويل تلقائي بعد الدفع إلى صفحة الجيك آوت -->
                         <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
                             <input type="hidden" name="cmd" value="_xclick" />
                             <input type="hidden" name="business" value="fahadtime91@gmail.com" />
                             <input type="hidden" name="item_name" value="FT-REMIX-001 – TIME (LIL JON – GET LOW) – FULL VERSION" />
                             <input type="hidden" name="amount" value="15.00" />
                             <input type="hidden" name="currency_code" value="USD" />
+                            <!-- بعد الدفع يرجعه إلى صفحة checkout اللي فيها Google Form -->
                             <input type="hidden" name="return" value="https://fahadtime.github.io/fahadtime/checkout/checkout.html" />
                             <button type="submit" class="btn-primary btn-small">
                                 شراء النسخة الكاملة
@@ -499,12 +501,12 @@
                 <span class="en">Funk & Groovy</span>
             </h2>
             <p class="section-subtitle">
-                تراكات فنك للاستماع من الموقع فقط، والنسخة الكاملة ترسل بعد الدفع.
+                فنكيات حماسية، معاينة 15 ثانية فقط، والنسخة الكاملة تُرسل بعد الدفع.
             </p>
         </div>
 
         <div class="cards">
-            <!-- مثال -->
+            <!-- نموذج -->
             <article class="card">
                 <div class="card-inner">
                     <div class="card-label">Funk · Groovy</div>
@@ -514,7 +516,7 @@
                     </h3>
                     <p>مثال يمكن تغييره لاحقاً بتراك حقيقي.</p>
                     <div class="track-meta">
-                        يمكنك استبدال هذا الكرت لاحقاً.
+                        لاحقاً يمكنك إضافة معاينة حقيقية هنا بنفس نظام 15 ثانية.
                     </div>
                 </div>
             </article>
@@ -532,13 +534,13 @@
                         <span class="highlight">FAHAD TIME</span>.
                     </p>
                     <div class="track-meta">
-                        الصوت هنا للمعاينة والاستماع فقط، النسخة الكاملة والإصدار النهائي ترسل بعد الدفع.
+                        ما تسمعه هنا هو جزء قصير فقط من العمل (15 ثانية) لغرض المعاينة.
                     </div>
                     <div class="price-tag">السعر / Price: 15 USD</div>
 
                     <div class="audio-row">
-                        <div class="audio-label">استماع / Listen:</div>
-                        <audio controls controlslist="nodownload noplaybackrate" oncontextmenu="return false;">
+                        <div class="audio-label">معاينة 15 ثانية (12s → 27s):</div>
+                        <audio class="preview-15" controls controlslist="nodownload noplaybackrate" oncontextmenu="return false;">
                             <source src="tracks/130-طلعت-شقلباظ.mp3" type="audio/mpeg" />
                             متصفحك لا يدعم تشغيل الصوت.
                         </audio>
@@ -606,7 +608,7 @@
                 <span class="en">Payment & Downloads</span>
             </h2>
             <p class="section-subtitle">
-                الدفع يتم حالياً عبر PayPal، واستلام النسخة الكاملة يكون عبر بريدك الإلكتروني بعد تعبئة النموذج.
+                الدفع يتم حالياً عبر PayPal، واستلام النسخة الكاملة يكون عبر بريدك الإلكتروني بعد تعبئة النموذج في صفحة الجيك أوت.
             </p>
         </div>
 
@@ -624,9 +626,9 @@
                         <span class="highlight">fahadtime91@gmail.com</span>
                         <br><br>
                         بعد الدفع:
-                        <br>1️⃣ سيتم تحويلك إلى صفحة <a href="checkout/checkout.html" style="color: var(--accent-cyan);">إتمام الشراء</a><br>
+                        <br>1️⃣ سيتم تحويلك تلقائياً إلى صفحة <a href="checkout/checkout.html" style="color: var(--accent-cyan);">إتمام الشراء</a><br>
                         2️⃣ تعبئ نموذج Google Form<br>
-                        3️⃣ سيتم إرسال رابط تحميل النسخة الكاملة إلى بريدك.
+                        3️⃣ يتم إرسال رابط تحميل النسخة الكاملة إلى بريدك بعد التأكد.
                     </p>
                 </div>
             </article>
@@ -635,7 +637,40 @@
 
     <footer class="footer">
         © <span>FAHAD TIME</span> – متجر الأعمال الموسيقية.  
-        الاستماع من الموقع فقط، والتحميل متاح بعد الدفع عن طريق البريد الإلكتروني.
+        المعاينة 15 ثانية فقط للاستماع، والتحميل متاح بعد الدفع عبر البريد الإلكتروني.
     </footer>
+
+    <!-- سكربت المعاينة: 12s → 27s لكل audio.preview-15 -->
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var START = 12;
+        var END = 27;
+        var previews = document.querySelectorAll("audio.preview-15");
+
+        previews.forEach(function (audio) {
+            // أول ما يحمّل الملف نضبط البداية
+            audio.addEventListener("loadedmetadata", function () {
+                if (!isNaN(audio.duration) && audio.duration > START) {
+                    audio.currentTime = START;
+                }
+            });
+
+            // لو ضغط تشغيل وهو خارج المدى نرجعه للبداية
+            audio.addEventListener("play", function () {
+                if (audio.currentTime < START || audio.currentTime > END) {
+                    audio.currentTime = START;
+                }
+            });
+
+            // نوقف عند 27 ثانية ونرجع لبداية المعاينة
+            audio.addEventListener("timeupdate", function () {
+                if (audio.currentTime >= END) {
+                    audio.pause();
+                    audio.currentTime = START;
+                }
+            });
+        });
+    });
+    </script>
 </body>
 </html>
